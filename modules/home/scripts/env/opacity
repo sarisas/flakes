@@ -1,0 +1,1 @@
+hyprctl --batch 'keyword decoration:active_opacity 0.9 ; keyword decoration:inactive_opacity 0.9 ; keyword decoration:fullscreen_opacity 1.0'

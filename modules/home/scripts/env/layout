@@ -1,0 +1,1 @@
+hyprctl --batch 'keyword general:layout dwindle;'

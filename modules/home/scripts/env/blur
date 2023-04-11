@@ -1,0 +1,1 @@
+hyprctl --batch 'keyword decoration:blur 0'
