@@ -51,7 +51,9 @@
     ffmpeg
     mpd
     ncmpcpp
+    bore
 
+ 
     #nur
   ]);
 }
