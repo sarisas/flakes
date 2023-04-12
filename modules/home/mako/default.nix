@@ -4,7 +4,7 @@
   services = {
     mako = {
       enable = true;
-      font = "Cartograph CF 11";
+      font = "FiraCode Nerd Font 11";
       padding = "20";
       defaultTimeout = 5000;
       borderSize = 2;

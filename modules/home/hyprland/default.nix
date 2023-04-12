@@ -67,7 +67,7 @@
         new_is_master = true
         special_scale_factor = 1
         new_is_master = true
-        no_gaps_when_only = false
+        no_gaps_when_only = true
       }
 
       decoration {
@@ -118,7 +118,7 @@
       bind = $mainMod, A,exec, $HOME/.local/bin/toggle_animation
       bind = $mainMod, D,exec, $HOME/.local/bin/toggle_blur
       # screenshot
-      bind = ,Print, exec, grimblast --notify --cursor copysave area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S").png
+      bind = ,Print, exec, grimblast --notify --cursor save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S").png
       bind = $mainMod, Print, exec, grimblast --notify --cursor  copy area
       # switch focus
       bind = $mainMod, left, movefocus, l
@@ -182,10 +182,7 @@
       windowrule = noanim,title:wofi
 
 
-      windowrule=nofullscreenrequest,class:firefox
       windowrule=idleinhibit focus,mpv
-      windowrule=idleinhibit focus,foot
-      windowrule=idleinhibit fullscreen,firefox
       windowrule=float,udiskie
       windowrule=float,title:^(Transmission)$
       windowrule=float,title:^(Volume Control)$
@@ -196,22 +193,26 @@
       windowrulev2 = float, title:^(Picture-in-Picture)$
       windowrulev2 = pin, title:^(Picture-in-Picture)$
       windowrule=float,imv
-      windowrule=move 685 100,imv
-      windowrule=size 550 900,imv
+      windowrule=move 510 290,imv
+      windowrule=size 900 500,imv
       windowrule=float,mpv
-      windowrule=move 685 100,mpv
-      windowrule=size 550 900,mpv
+      windowrule=move 510 290,mpv
+      windowrule=size 900 500,mpv
       windowrulev2 = idleinhibit focus, class:^(mpv)$
       windowrulev2 = idleinhibit fullscreen, class:^(firefox)$
-
       windowrule = workspace 9 silent,discord
 
 
       # autostart
-      exec-once=hyprctl setcursor Catppuccin-Frappe-Dark 16
-      exec-once = swww init && sleep 0.1 && swww img .local/share/default_wallpaper &
-      exec-once = sleep 0.1 && swaylock && notify-send "Hey $USER, Welcome back" &
-      exec-once = sleep 1 && waybar && mako && nm-applet --indicator &
+      exec-once = hyprctl setcursor Catppuccin-Frappe-Dark 16
+      exec-once = systemctl --user import-environment &
+      exec-once = hash dbus-update-activation-environment 2>/dev/null &
+      exec-once = dbus-update-activation-environment --systemd &
+      exec-once = swww init && sleep 0.1 && swww img .local/share/default_wallpaper && sleep 0.1 && swaylock && notify-send "Hey $USER, Welcome back" &
+      exec-once = sleep 1 && waybar &
+      exec-once = mako &
+      exec-once = discord --minimize &
+      exec = bash ~/.local/bin/env/load_env
     '';
   };
 }

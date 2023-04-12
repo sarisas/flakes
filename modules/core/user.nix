@@ -4,7 +4,7 @@ let
   name = "Samiul Basir Fahim";
   username = "fahim";
   email = "samiulbasirfahim360@gmail.com";
-  initialPassword = "rainy";
+  initialPassword = "dreamX";
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];

@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ (import ./firefox/firefox.nix) ];
+    [ (import ./firefox) ];
 #    [ (import ./python.nix) ];
 
 
@@ -51,5 +51,7 @@
     ffmpeg
     mpd
     ncmpcpp
+
+    #nur
   ]);
 }

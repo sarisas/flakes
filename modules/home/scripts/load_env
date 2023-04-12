@@ -1,6 +1,6 @@
 #!/bin/sh
 
-~/.local/bin/env/animation
-~/.local/bin/env/blur
-~/.local/bin/env/layout
-~/.local/bin/env/opacity
+bash ~/.local/bin/env/animation
+bash ~/.local/bin/env/blur
+bash ~/.local/bin/env/layout
+bash ~/.local/bin/env/opacity

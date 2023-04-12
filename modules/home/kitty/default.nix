@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       background_opacity = "1";
-      font_family = "Cartograph CF";
+      font_family = "FiraCode Nerd Font";
       font_size = 13;
       disable_ligatures = "never";
       cursor_shape = "underline";

@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, user, ... }:
+{ pkgs, ... }:
 
 {
   fonts.fontconfig.enable = true;
@@ -7,13 +7,12 @@
     pkgs.noto-fonts
     pkgs.noto-fonts-cjk
     pkgs.noto-fonts-emoji
-    pkgs.nerdfonts
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
-  home.file.".local/share/fonts/CartographCF-RegularItalic.ttf".source = ./CartographCF-RegularItalic.ttf;
   gtk = {
     enable = true;
     font = {
-      name = "Cartograph CF";
+      name = "FiraCode Nerd Font";
       size = 10.5;
     };
     iconTheme = {

@@ -8,7 +8,7 @@
     };
     style = ''
             * {
-            font-family: Cartograph CF, FiraCode Nerd Font;
+            font-family: FiraCode Nerd Font;
             font-weight: normal;
             font-size: 13.5px;
             min-height: 0;
