@@ -51,7 +51,7 @@
     ffmpeg
     mpd
     ncmpcpp
-    bore
+    bore-cli
 
  
     #nur

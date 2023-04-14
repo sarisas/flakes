@@ -36,7 +36,7 @@
       profiles = {
         default = {
           id = 0;
-          name = "default";
+          name = "fahim";
           search = {
             force = true;
             default = "DashDuckGO";
@@ -48,7 +48,7 @@
                 definedAliases = [ "@nw" ];
               };
               "Wikipedia (en)".metaData.alias = "@wiki";
-              "Google".metaData.alias = "@gogole";
+              "Google".metaData.hidden = true;
               "Amazon.com".metaData.hidden = true;
               "Bing".metaData.hidden = true;
               "eBay".metaData.hidden = true;
@@ -60,6 +60,7 @@
             "privacy.webrtc.legacyGlobalIndicator" = false;
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
             "browser.compactmode.show" = true;
+            "full-screen-api.ignore-widgets" = false;
           };
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             ublock-origin
