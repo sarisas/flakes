@@ -3,7 +3,7 @@
 {
   imports =
     [ (import ./firefox) ];
-#    [ (import ./python.nix) ];
+  #    [ (import ./python.nix) ];
 
 
 
@@ -34,7 +34,6 @@
     pavucontrol
     wget
     unzip
-    discord
     gparted
     mpv
     tty-clock
@@ -52,8 +51,9 @@
     mpd
     ncmpcpp
     bore-cli
-
- 
-    #nur
+    webcord
+  ] ++ [
+    # nur.repos.aleksana.gtkcord4
+    # nur.repos.aleksana.go-musicfox
   ]);
 }

@@ -14,6 +14,5 @@
     [ (import ./neofetch) ] ++
     [ (import ./starship) ] ++
     [ (import ./wlogout) ] ++
-    [ (import ./alacritty) ] ++
     [ (import ./package) ];
 }

@@ -66,6 +66,7 @@
             ublock-origin
             duckduckgo-privacy-essentials
             languagetool
+            news-feed-eradicator
           ];
           userChrome = builtins.readFile userChrome;
         };

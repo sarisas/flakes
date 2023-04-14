@@ -200,7 +200,7 @@
       windowrule=size 900 500,mpv
       windowrulev2 = idleinhibit focus, class:^(mpv)$
       windowrulev2 = idleinhibit fullscreen, class:^(firefox)$
-      windowrule = workspace 9 silent,discord
+      windowrule = workspace 9 silent,webcord
 
 
       # autostart
@@ -211,7 +211,7 @@
       exec-once = swww init && sleep 0.1 && swww img .local/share/default_wallpaper && sleep 0.1 && swaylock && notify-send "Hey $USER, Welcome back" &
       exec-once = sleep 1 && waybar &
       exec-once = mako &
-      exec-once = discord --minimize &
+      exec-once = webcord &
       exec = bash ~/.local/bin/env/load_env
     '';
   };
