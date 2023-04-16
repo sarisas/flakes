@@ -8,114 +8,80 @@
     };
     style = ''
             * {
-            font-family: FiraCode Nerd Font;
-            font-weight: normal;
-            font-size: 13.5px;
-            min-height: 0;
-            transition-property: background-color;
-            transition-duration: 0.5s;
-            }
-            window#waybar {
-              background-color: transparent;
-            }
-            window > box {
-              margin-left: 10px;
-              margin-right: 10px;
-              margin-top: 8px;
-              border: 2px solid #206686;
-              border-radius: 4px;
-              background-color: rgb(30, 30, 46);
-            }
-            #workspaces {
-              padding-left: 0px;
-              padding-right: 4px;
-              border-radius: 0px;
-            }
-            #workspaces button {
-              padding-top: 5px;
-              border-radius: 0px;
-              padding-bottom: 5px;
-              padding-left: 6px;
-              padding-right: 6px;
-            }
-            #workspaces button.active {
-              background-color: #206686;
-              color: rgb(26, 24, 38);
-            }
-            #workspaces button.urgent {
-              color: rgb(26, 24, 38);
-            }
-            tooltip {
-              background: rgb(48, 45, 65);
-            }
-            tooltip label {
-              color: rgb(217, 224, 238);
-            }
-            #custom-launcher {
-              font-size: 16px;
-              padding-left: 8px;
-              padding-right: 6px;
-              color: #7ebae4;
-            }
-            #clock, 
-            #memory, 
-            #temperature,
-            #cpu,
-            #mpd, 
-            #custom-wall, 
-            #temperature, 
-            #backlight, 
-            #pulseaudio, 
-            #network, 
-            #battery, 
-            #disk, 
-            #idle_inhibitor
-            {
-              padding-left: 8px;
-              padding-right: 8px;
-              padding-top: 0px;
-              padding-bottom: 0px;
-              color: rgb(181, 232, 224);
-            }
-      /*      #mode {
-              margin-left: 10px;
-              background-color: rgb(248, 189, 150);
-              color: rgb(26, 24, 38);
-            }
-            #memory {
-              color: rgb(181, 232, 224);
-            }
-            #cpu {
-              color: rgb(245, 194, 231);
-            }
-            #clock {
-              color: rgb(217, 224, 238);
-            }
-            #custom-wall {
-              color: rgb(221, 182, 242);
-            }
-            #temperature {
-              color: rgb(150, 205, 251);
-            }
-            #pulseaudio.microphone {
-              color: rgb(248, 189, 150);
-            }
-            #pulseaudio {
-              color: rgb(245, 224, 220);
-            }
-            #network {
-              color: #ABE9B3;
-            }
-            #network.disconnected {
-              color: rgb(255, 255, 255);
-            }
-            #disk {
-              color: rgb(242, 143, 173);
-            } */
-            #tray {
-              padding-right: 8px;
-              padding-left: 13px;
-            }
+    font-family: FiraCode Nerd Font;
+    font-weight: normal;
+    font-size: 13.5px;
+    min-height: 0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    }
+    window#waybar {
+      background-color: transparent;
+    }
+    window > box {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 8px;
+      border: 0px solid #206686;
+      border-radius: 4px;
+      background-color: rgb(30, 30, 46);
+    }
+    #workspaces {
+      padding-left: 0px;
+      padding-right: 4px;
+      border-radius: 0px;
+    }
+    #workspaces button {
+      padding-top: 5px;
+      border-radius: 0px;
+      padding-bottom: 5px;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+    #workspaces button.active {
+      background-color: #206686;
+      color: rgb(26, 24, 38);
+    }
+    #workspaces button.urgent {
+      color: rgb(26, 24, 38);
+    }
+    tooltip {
+      background: rgb(48, 45, 65);
+    }
+    tooltip label {
+      color: rgb(217, 224, 238);
+    }
+    #custom-launcher {
+      font-size: 16px;
+      padding-left: 8px;
+      padding-right: 6px;
+      color: #7ebae4;
+    }
+    #clock, 
+    #memory, 
+    #temperature,
+    #cpu,
+    #mpd, 
+    #custom-wall, 
+    #temperature, 
+    #backlight, 
+    #pulseaudio, 
+    #network, 
+    #battery, 
+    #disk, 
+    #idle_inhibitor
+    {
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      color: rgb(181, 232, 224);
+    }
+    #tray {
+      padding-right: 8px;
+      padding-left: 13px;
+    }
+
 
     '';
     settings = [{
@@ -145,7 +111,6 @@
         "on-click" = "pkill wofi || wofi";
         "tooltip" = false;
       };
-
       "idle_inhibitor" = {
         "format" = "{icon}";
         "format-icons" = {

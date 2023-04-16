@@ -52,6 +52,7 @@
     ncmpcpp
     bore-cli
     webcord
+    
   ] ++ [
     # nur.repos.aleksana.gtkcord4
     # nur.repos.aleksana.go-musicfox
