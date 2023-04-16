@@ -23,7 +23,6 @@ in
       [ (import ./system.nix) ] ++
       [ (import ./user.nix) ] ++
       [ (import ./wayland.nix) ] ++
-      # [ (import ./xserver.nix) ] ++
       [ (import ./../../hosts/nixos/hardware-configuration.nix) ];
   };
 }

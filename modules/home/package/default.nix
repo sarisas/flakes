@@ -52,7 +52,7 @@
     ncmpcpp
     bore-cli
     webcord
-    
+    rofi-wayland
   ] ++ [
     # nur.repos.aleksana.gtkcord4
     # nur.repos.aleksana.go-musicfox

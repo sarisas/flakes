@@ -1,9 +1,9 @@
 { hostname, config, pkgs, ... }: {
   programs.fish = {
-    #loginShellInit = ''
-    #  set TTY1 (tty)
-    #  [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
-    #'';
+    loginShellInit = ''
+      set TTY1 (tty)
+      [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
+    '';
     enable = true;
     shellAliases = {
       n = "clear && neofetch";

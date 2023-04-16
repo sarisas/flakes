@@ -92,7 +92,6 @@
         "wlr/workspaces"
         "temperature"
         "idle_inhibitor"
-        "tray"
       ];
       modules-center = [
         "clock"
@@ -104,6 +103,7 @@
         "cpu"
         "disk"
         "network"
+        "tray"
       ];
       "custom/launcher" = {
         "format" = " ";
@@ -184,10 +184,10 @@
         "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
         "format" = " {temperatureC}°C";
       };
-      # "tray" = {
-      #   "icon-size" = 12;
-      #   "spacing" = 10;
-      # };
+      "tray" = {
+        "icon-size" = 12;
+        "spacing" = 10;
+      };
     }];
   };
   programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {

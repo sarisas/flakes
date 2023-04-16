@@ -81,14 +81,14 @@
 
       animations {
         enabled = true
-        bezier = smoothIn, 0.25, 1, 0.5, 1
+        bezier = smoothIn, 0.2, 0.4, 0.6, 1
         bezier = overshot,1,1,1,1
-        animation = windows, 1, 2, overshot, slide
-        animation = windowsOut, 1, 2, overshot, slide
-        animation=border,1,2,default
-        animation = fade, 1, 6, smoothIn
-        animation = fadeDim, 1, 6, smoothIn
-        animation = workspaces,1, 2,overshot,slidevert
+        animation = windows, 1, 3, overshot, slide
+        animation = windowsOut, 1, 3, overshot, slide
+        animation=border,1,4,default
+        animation = fade, 1, 5, smoothIn
+        animation = fadeDim, 1, 5, smoothIn
+        animation = workspaces,1, 3,overshot,slidevert
       }
 
       # ----------------------------------------------------------------
@@ -172,28 +172,30 @@
       bindm = $mainMod, mouse:273, resizewindow
 
       # windowrule
-      windowrule = float,title:wlogout
-      windowrule = float,title:wofi
-      windowrule = noanim,title:wlogout
-      windowrule = noanim,title:wofi
+      windowrule = float,wlogout
+      windowrule = float,wofi
+      windowrule = noanim,wlogout
+      windowrule = noanim,wofi
+      windowrule = pin,wofi
+      windowrule = noborder,wofi
 
 
-      windowrule=idleinhibit focus,mpv
-      windowrule=float,udiskie
-      windowrule=float,title:^(Transmission)$
-      windowrule=float,title:^(Volume Control)$
-      windowrule=float,title:^(Firefox — Sharing Indicator)$
-      windowrule=move 0 0,title:^(Firefox — Sharing Indicator)$
-      windowrule=size 700 450,title:^(Volume Control)$
-      windowrule=move 40 55%,title:^(Volume Control)$
+      windowrule = idleinhibit focus,mpv
+      windowrule = float,udiskie
+      windowrule = float,title:^(Transmission)$
+      windowrule = float,title:^(Volume Control)$
+      windowrule = float,title:^(Firefox — Sharing Indicator)$
+      windowrule = move 0 0,title:^(Firefox — Sharing Indicator)$
+      windowrule = size 700 450,title:^(Volume Control)$
+      windowrule = move 40 55%,title:^(Volume Control)$
       windowrulev2 = float, title:^(Picture-in-Picture)$
       windowrulev2 = pin, title:^(Picture-in-Picture)$
-      windowrule=float,imv
-      windowrule=move 510 290,imv
-      windowrule=size 900 500,imv
-      windowrule=float,mpv
-      windowrule=move 510 290,mpv
-      windowrule=size 900 500,mpv
+      windowrule = float,imv
+      windowrule = move 510 290,imv
+      windowrule = size 900 500,imv
+      windowrule = float,mpv
+      windowrule = move 510 290,mpv
+      windowrule = size 900 500,mpv
       windowrulev2 = idleinhibit focus, class:^(mpv)$
       windowrulev2 = idleinhibit fullscreen, class:^(firefox)$
       windowrule = workspace 9 silent,webcord
