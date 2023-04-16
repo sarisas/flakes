@@ -2,14 +2,14 @@
 
 opacity_val=$(hyprctl getoption decoration:active_opacity | grep float)
 echo "$opacity_val"
-if [[ "$opacity_val" == "	float: 0.900000" ]]; then
+if [[ "$opacity_val" == "	float: 0.940000" ]]; then
     rm -rf ~/.local/bin/env/opacity
     echo "hyprctl --batch 'keyword decoration:active_opacity 1.0 ; keyword decoration:inactive_opacity 1.0 ; keyword decoration:fullscreen_opacity 1.0'" > ~/.local/bin/env/opacity
     hyprctl --batch "keyword decoration:active_opacity 1.0 ; keyword decoration:inactive_opacity 1.0 ; keyword decoration:fullscreen_opacity 1.0"
 else
     rm -rf ~/.local/bin/env/opacity
-    echo "hyprctl --batch 'keyword decoration:active_opacity 0.9 ; keyword decoration:inactive_opacity 0.9 ; keyword decoration:fullscreen_opacity 1.0'" > ~/.local/bin/env/opacity
-    hyprctl --batch "keyword decoration:active_opacity 0.9 ; keyword decoration:inactive_opacity 0.9 ; keyword decoration:fullscreen_opacity 1.0"
+    echo "hyprctl --batch 'keyword decoration:active_opacity 0.94 ; keyword decoration:inactive_opacity 0.92 ; keyword decoration:fullscreen_opacity 1.0'" > ~/.local/bin/env/opacity
+    hyprctl --batch "keyword decoration:active_opacity 0.94 ; keyword decoration:inactive_opacity 0.92 ; keyword decoration:fullscreen_opacity 1.0"
 fi
 
 

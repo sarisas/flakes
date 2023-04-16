@@ -7,80 +7,80 @@
       target = "graphical-session.target";
     };
     style = ''
-            * {
-    font-family: FiraCode Nerd Font;
-    font-weight: normal;
-    font-size: 13.5px;
-    min-height: 0;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    }
-    window#waybar {
-      background-color: transparent;
-    }
-    window > box {
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 8px;
-      border: 0px solid #206686;
-      border-radius: 4px;
-      background-color: rgb(30, 30, 46);
-    }
-    #workspaces {
-      padding-left: 0px;
-      padding-right: 4px;
-      border-radius: 0px;
-    }
-    #workspaces button {
-      padding-top: 5px;
-      border-radius: 0px;
-      padding-bottom: 5px;
-      padding-left: 6px;
-      padding-right: 6px;
-    }
-    #workspaces button.active {
-      background-color: #206686;
-      color: rgb(26, 24, 38);
-    }
-    #workspaces button.urgent {
-      color: rgb(26, 24, 38);
-    }
-    tooltip {
-      background: rgb(48, 45, 65);
-    }
-    tooltip label {
-      color: rgb(217, 224, 238);
-    }
-    #custom-launcher {
-      font-size: 16px;
-      padding-left: 8px;
-      padding-right: 6px;
-      color: #7ebae4;
-    }
-    #clock, 
-    #memory, 
-    #temperature,
-    #cpu,
-    #mpd, 
-    #custom-wall, 
-    #temperature, 
-    #backlight, 
-    #pulseaudio, 
-    #network, 
-    #battery, 
-    #disk, 
-    #idle_inhibitor
-    {
-      padding-left: 8px;
-      padding-right: 8px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      color: rgb(181, 232, 224);
-    }
-    #tray {
-      padding-right: 8px;
-      padding-left: 13px;
-    }
+      * {
+      font-family: FiraCode Nerd Font;
+      font-weight: normal;
+      font-size: 13.5px;
+      min-height: 0;
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      }
+      window#waybar {
+        background-color: transparent;
+      }
+      window > box {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 8px;
+        border: 2px solid #206686;
+        border-radius: 4px;
+        background-color: rgba(30, 30, 46, 1);
+      }
+      #workspaces {
+        padding-left: 0px;
+        padding-right: 4px;
+        border-radius: 0px;
+      }
+      #workspaces button {
+        padding-top: 5px;
+        border-radius: 0px;
+        padding-bottom: 5px;
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+      #workspaces button.active {
+        background-color: #206686;
+        color: rgb(26, 24, 38);
+      }
+      #workspaces button.urgent {
+        color: rgb(26, 24, 38);
+      }
+      tooltip {
+        background: rgb(48, 45, 65);
+      }
+      tooltip label {
+        color: rgb(217, 224, 238);
+      }
+      #custom-launcher {
+        font-size: 16px;
+        padding-left: 8px;
+        padding-right: 6px;
+        color: #7ebae4;
+      }
+      #clock, 
+      #memory, 
+      #temperature,
+      #cpu,
+      #mpd, 
+      #custom-wall, 
+      #temperature, 
+      #backlight, 
+      #pulseaudio, 
+      #network, 
+      #battery, 
+      #disk, 
+      #idle_inhibitor
+      {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        color: rgb(181, 232, 224);
+      }
+      #tray {
+        padding-right: 8px;
+        padding-left: 13px;
+      }
 
 
     '';
@@ -92,6 +92,7 @@
         "wlr/workspaces"
         "temperature"
         "idle_inhibitor"
+        "tray"
       ];
       modules-center = [
         "clock"
@@ -103,8 +104,6 @@
         "cpu"
         "disk"
         "network"
-        # "custom/powermenu"
-        "tray"
       ];
       "custom/launcher" = {
         "format" = " ";
@@ -161,11 +160,6 @@
         "tooltip" = true;
         "tooltip-format" = "<tt>{calendar}</tt>";
       };
-      # "clock" = {
-      #   "format" = "{:%I:%M %p}";
-      #   "format-alt" = "{:%I:%M %p  %A %b %d}";
-      #   "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      # };
       "memory" = {
         "interval" = 1;
         "format" = "󰨅 {percentage}%";
@@ -181,7 +175,6 @@
         "interval" = 1;
         "format" = "說 Connected({ifname})";
         "format-alt" = "  {bandwidthUpBytes}    {bandwidthDownBytes}";
-        # "format-alt" = "說  ({ipaddr})";
         "format-disconnected" = "說 Disconnected";
         "tooltip" = false;
       };
@@ -191,15 +184,10 @@
         "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
         "format" = " {temperatureC}°C";
       };
-      "custom/powermenu" = {
-        "format" = "";
-        "on-click" = "pkill wlogout || wlogout";
-        "tooltip" = false;
-      };
-      "tray" = {
-        "icon-size" = 12;
-        "spacing" = 10;
-      };
+      # "tray" = {
+      #   "icon-size" = 12;
+      #   "spacing" = 10;
+      # };
     }];
   };
   programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {

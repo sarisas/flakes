@@ -2,7 +2,8 @@
 {
   boot = {
     cleanTmpDir = true;
-    kernelPackages = pkgs.linuxPackages_zen;
+    # kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
     plymouth = {
       enable = false;
     };

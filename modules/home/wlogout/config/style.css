@@ -2,7 +2,7 @@ window {
     font-family: FiraCode Nerd Font;
     font-size: 14pt;
     color: #CED7F4; /* text */
-    background-color: rgba(30, 30, 46, 0);
+    background-color: rgba(30, 30, 46, 0.5);
 }
 
 button {
@@ -16,7 +16,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(49, 50, 68, 0.1);
+    background-color: rgba(49, 50, 68, 0.5);
 }
 
 
