@@ -70,12 +70,12 @@
       }
 
       decoration {
-        rounding = 2
+        rounding = 0
         multisample_edges = true
         blur_new_optimizations = 1
         blur = 1
         blur_size = 3
-        blur_passes = 2
+        blur_passes = 1
         drop_shadow = no
       }
 
@@ -209,7 +209,7 @@
       exec-once = swww init && sleep 0.1 && swww img .local/share/default_wallpaper && sleep 0.1 && swaylock && notify-send "Hey $USER, Welcome back" &
       exec-once = sleep 1 && waybar &
       exec-once = mako &
-      exec-once = webcord -m &
+      exec-once = sleep 4 && webcord -m &
       exec = bash ~/.local/bin/env/load_env
     '';
   };

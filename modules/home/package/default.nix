@@ -23,7 +23,6 @@
     cargo
     rustc
 
-
     # others
     libnotify
     dmidecode
@@ -53,6 +52,7 @@
     bore-cli
     webcord
     rofi-wayland
+    google-chrome
   ] ++ [
     # nur.repos.aleksana.gtkcord4
     # nur.repos.aleksana.go-musicfox
