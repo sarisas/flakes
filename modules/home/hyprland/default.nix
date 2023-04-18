@@ -74,21 +74,21 @@
         multisample_edges = true
         blur_new_optimizations = 1
         blur = 1
-        blur_size = 3
+        blur_size = 2
         blur_passes = 1
         drop_shadow = no
       }
 
       animations {
         enabled = true
-        bezier = smoothIn, 0.2, 0.4, 0.6, 1
+        bezier = smoothIn, 0.25, 1, 0.5, 1
         bezier = overshot,1,1,1,1
-        animation = windows, 1, 3, overshot, slide
-        animation = windowsOut, 1, 3, overshot, slide
-        animation=border,1,4,default
-        animation = fade, 1, 5, smoothIn
-        animation = fadeDim, 1, 5, smoothIn
-        animation = workspaces,1, 3,overshot,slidevert
+        animation = windows, 1, 2, overshot, slide
+        animation = windowsOut, 1, 2, overshot, slide
+        animation=border,1,2,default
+        animation = fade, 1, 6, smoothIn
+        animation = fadeDim, 1, 6, smoothIn
+        animation = workspaces,1, 2,overshot,slidevert
       }
 
       # ----------------------------------------------------------------
