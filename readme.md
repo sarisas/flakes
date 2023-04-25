@@ -2,7 +2,8 @@
 
 # **Nixos - Hyprland**
 </div>
-From [samiulbasirfahim](https://github.com/samiulbasirfahim/flakes)
+From (samiulbasirfahim)[https://github.com/samiulbasirfahim/flakes]
+
 ## Installation guide
 
 1. ``` git clone https://github.com/sarisas/flakes.git ~/Flakes ```
